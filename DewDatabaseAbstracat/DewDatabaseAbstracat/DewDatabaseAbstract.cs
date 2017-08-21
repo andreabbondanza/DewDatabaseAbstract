@@ -127,6 +127,17 @@ namespace DewCore.Abstract.Database
         void OpenConnection();
     }
     /// <summary>
+    /// Connection string interface
+    /// </summary>
+    public interface IConnectionString
+    {
+        /// <summary>
+        /// Return database connection string
+        /// </summary>
+        /// <returns></returns>
+        string GetConnectionString();
+    }
+    /// <summary>
     /// Ignore this attribute when you are in the insert query
     /// </summary>
     [System.AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = false)]
