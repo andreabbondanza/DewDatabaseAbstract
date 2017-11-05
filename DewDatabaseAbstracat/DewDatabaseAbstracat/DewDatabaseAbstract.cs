@@ -7,6 +7,30 @@ using System.Threading.Tasks;
 namespace DewCore.Abstract.Database
 {
     /// <summary>
+    /// DatabaseError Class
+    /// </summary>
+    public sealed class DatabaseError
+    {
+        /// <summary>
+        /// Description
+        /// </summary>
+        public string Description { get; }
+        /// <summary>
+        /// Number
+        /// </summary>
+        public int Number { get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="desc"></param>
+        /// <param name="errn"></param>
+        public DatabaseError(string desc, int errn)
+        {
+            Description = desc;
+            Number = errn;
+        }
+    }
+    /// <summary>
     /// Database table ORM Interface
     /// </summary>
     public interface IDatabaseTable
@@ -28,15 +52,10 @@ namespace DewCore.Abstract.Database
     public interface IDatabaseResponse
     {
         /// <summary>
-        /// Return error
+        /// Return query error
         /// </summary>
         /// <returns></returns>
-        string ErrorDesc();
-        /// <summary>
-        /// Return error number
-        /// </summary>
-        /// <returns></returns>
-        int ErrorN();
+        DatabaseError GetError();
         /// <summary>
         /// True if query success
         /// </summary>
