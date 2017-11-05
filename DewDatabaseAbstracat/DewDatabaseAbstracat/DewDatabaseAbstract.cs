@@ -28,6 +28,21 @@ namespace DewCore.Abstract.Database
     public interface IDatabaseResponse
     {
         /// <summary>
+        /// Return error
+        /// </summary>
+        /// <returns></returns>
+        string ErrorDesc();
+        /// <summary>
+        /// Return error number
+        /// </summary>
+        /// <returns></returns>
+        int ErrorN();
+        /// <summary>
+        /// True if query success
+        /// </summary>
+        /// <returns></returns>
+        bool IsSuccess();
+        /// <summary>
         /// Get last inserted row
         /// </summary>
         /// <returns></returns>
