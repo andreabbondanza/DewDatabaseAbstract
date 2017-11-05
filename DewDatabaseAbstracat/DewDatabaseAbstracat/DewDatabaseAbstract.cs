@@ -7,6 +7,22 @@ using System.Threading.Tasks;
 namespace DewCore.Abstract.Database
 {
     /// <summary>
+    /// Database table ORM Interface
+    /// </summary>
+    public interface IDatabaseTable
+    {
+        /// <summary>
+        /// Returns table fields
+        /// </summary>
+        /// <returns></returns>
+        int Count();
+        /// <summary>
+        /// Check local if fields constraints are valid (only when possible)
+        /// </summary>
+        /// <returns></returns>
+        bool CheckConstarints();
+    }
+    /// <summary>
     /// MySQL Response object for INSERT\DELETE\UPDATE
     /// </summary>
     public interface IDatabaseResponse
@@ -78,6 +94,16 @@ namespace DewCore.Abstract.Database
         /// <param name="tablePrefix">a table prefix if exists</param>
         /// <returns></returns>
         Task<T1> UpdateAsync<T>(T toFind, T toUpdate, string tablePrefix = null) where T : class;
+        /// <summary>
+        /// Update a row into the T table.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="toFind">The searched row</param>
+        /// <param name="toUpdate">the row</param>
+        /// <param name="toIgnore">Fields to ignore (do NOT override field attribute)</param>
+        /// <param name="tablePrefix">a table prefix if exists</param>
+        /// <returns></returns>
+        Task<T1> UpdateAsync<T>(T toFind, T toUpdate, List<string> toIgnore, string tablePrefix = null) where T : class;
         /// <summary>
         /// Delete a row into the T table. Works only with "=" assertions
         /// </summary>

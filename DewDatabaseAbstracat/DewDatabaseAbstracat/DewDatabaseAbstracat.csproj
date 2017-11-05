@@ -11,10 +11,10 @@
     <PackageTags>Database, MySQL, Postgresql, .net, .net standard, .net core</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/andreabbondanza/DewDatabaseAbstract/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.2.0</Version>
-    <PackageReleaseNotes>Connection string interface added</PackageReleaseNotes>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
-    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.3.0</Version>
+    <PackageReleaseNotes>Added IDatabaseTable Interface</PackageReleaseNotes>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <FileVersion>1.3.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
