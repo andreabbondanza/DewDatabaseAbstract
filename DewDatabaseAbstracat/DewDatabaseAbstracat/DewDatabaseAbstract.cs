@@ -83,6 +83,13 @@ namespace DewCore.Abstract.Database
     public interface IDatabaseClient<T1> where T1 : IDatabaseResponse
     {
         /// <summary>
+        /// Perform a query and return result into a dictionary
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        Task<ICollection<Dictionary<string, object>>> QueryDictionaryAsync(string query, ICollection<DbParameter> values);
+        /// <summary>
         /// Perform a query and return result in a ICollection of array
         /// </summary>
         /// <param name="query">Query</param>
