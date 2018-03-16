@@ -12,6 +12,10 @@ namespace DewCore.Abstract.Database
     public sealed class DatabaseError
     {
         /// <summary>
+        /// Default value for error
+        /// </summary>
+        public const int ErrorConst = -1;
+        /// <summary>
         /// Description
         /// </summary>
         public string Description { get; }
