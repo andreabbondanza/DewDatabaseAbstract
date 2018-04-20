@@ -12,6 +12,10 @@ namespace DewCore.Abstract.Database
     public sealed class DatabaseError
     {
         /// <summary>
+        /// Exception
+        /// </summary>
+        public Exception Exception { get; }
+        /// <summary>
         /// Default value for error
         /// </summary>
         public const int ErrorConst = -1;
@@ -32,6 +36,15 @@ namespace DewCore.Abstract.Database
         {
             Description = desc;
             Number = errn;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        public DatabaseError(Exception e)
+        {
+            Description = e.Message;
+            Number = e.HResult;
         }
     }
     /// <summary>
