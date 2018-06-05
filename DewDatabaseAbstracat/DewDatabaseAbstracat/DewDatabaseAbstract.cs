@@ -261,5 +261,13 @@ namespace DewCore.Abstract.Database
     {
 
     }
+    /// <summary>
+    /// This property can be null on database
+    /// </summary>
+    [System.AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = false)]
+    public sealed class Nullable : Attribute
+    {
+
+    }
 
 }
