@@ -128,6 +128,22 @@ namespace DewCore.Abstract.Database
         /// <param name="predicate"></param>
         /// <param name="tablePrefix"></param>
         /// <returns></returns>
+        Task<ICollection<T>> SelectAsync<T>(Func<T, bool> predicate, string tablePrefix) where T : class, new();
+        /// <summary>
+        /// Select directly in LINQ. NOTE: T name must be the Table Name
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="tablePrefix"></param>
+        /// <returns></returns>
+        Task<ICollection<T>> SelectAsync<T>(string tablePrefix) where T : class, new();
+        /// <summary>
+        /// Select directly in LINQ. NOTE: T name must be the Table Name
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="predicate"></param>
+        /// <param name="tablePrefix"></param>
+        /// <returns></returns>
+        [Obsolete]
         Task<ICollection<T>> Select<T>(Func<T, bool> predicate, string tablePrefix) where T : class, new();
         /// <summary>
         /// Select directly in LINQ. NOTE: T name must be the Table Name
@@ -135,6 +151,7 @@ namespace DewCore.Abstract.Database
         /// <typeparam name="T"></typeparam>
         /// <param name="tablePrefix"></param>
         /// <returns></returns>
+        [Obsolete]
         Task<ICollection<T>> Select<T>(string tablePrefix) where T : class, new();
         /// <summary>
         /// Perform a query (good for insert, update, delete)
