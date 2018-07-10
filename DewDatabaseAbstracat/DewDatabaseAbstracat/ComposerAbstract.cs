@@ -10,6 +10,12 @@ namespace DewCore.Abstract.Database
     public interface ISimpleQueryComposer
     {
         /// <summary>
+        /// Simple column compose
+        /// </summary>
+        /// <param name="column">column name</param>
+        /// <returns></returns>
+        ISimpleQueryComposer Column(string column);
+        /// <summary>
         /// Select composition
         /// </summary>
         /// <param name="columns">if null is *</param>
