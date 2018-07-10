@@ -114,6 +114,11 @@ namespace DewCore.Abstract.Database
         /// <returns></returns>
         ISimpleQueryComposer Where(string column, string op, string value);
         /// <summary>
+        /// Return single where composition
+        /// </summary>
+        /// <returns></returns>
+        ISimpleQueryComposer Where();
+        /// <summary>
         /// Return orderby composition
         /// </summary>
         /// <param name="columns"></param>
