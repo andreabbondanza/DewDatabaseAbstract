@@ -132,12 +132,12 @@ namespace DewCore.Abstract.Database
         /// <param name="op">operation</param>
         /// <param name="value">value</param>
         /// <returns></returns>
-        ISimpleQueryComposer AND(string column, string op, string value);
+        ISimpleQueryComposer And(string column, string op, string value);
         /// <summary>
         /// Return single AND composition
         /// </summary>
         /// <returns></returns>
-        ISimpleQueryComposer AND();
+        ISimpleQueryComposer And();
         /// <summary>
         /// Return a condition, followed by comma if needed
         /// </summary>
@@ -151,13 +151,13 @@ namespace DewCore.Abstract.Database
         /// Return single OR composition
         /// </summary>
         /// <returns></returns>
-        ISimpleQueryComposer OR();
+        ISimpleQueryComposer Or();
         /// <summary>
         /// Return IN composition
         /// </summary>
         /// <param name="innerComposer"></param>
         /// <returns></returns>
-        ISimpleQueryComposer IN(ISimpleQueryComposer innerComposer);
+        ISimpleQueryComposer In(ISimpleQueryComposer innerComposer);
         /// <summary>
         /// Return OR composition
         /// </summary>
@@ -165,7 +165,7 @@ namespace DewCore.Abstract.Database
         /// <param name="op"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        ISimpleQueryComposer OR(string column, string op, string value);
+        ISimpleQueryComposer Or(string column, string op, string value);
         /// <summary>
         /// Return Not composition
         /// </summary>
@@ -173,12 +173,12 @@ namespace DewCore.Abstract.Database
         /// <param name="op"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        ISimpleQueryComposer NOT(string column, string op, string value);
+        ISimpleQueryComposer Not(string column, string op, string value);
         /// <summary>
         /// Return single Not composition
         /// </summary>
         /// <returns></returns>
-        ISimpleQueryComposer NOT();
+        ISimpleQueryComposer Not();
         /// <summary>
         /// Return between composition {column} BETWEEN {before} AND {after}
         /// </summary>
@@ -199,7 +199,7 @@ namespace DewCore.Abstract.Database
         /// <param name="columnA"></param>
         /// <param name="columnB"></param>
         /// <returns></returns>
-        ISimpleQueryComposer ON(string columnA, string columnB);
+        ISimpleQueryComposer On(string columnA, string columnB);
         /// <summary>
         /// Clear current query
         /// </summary>

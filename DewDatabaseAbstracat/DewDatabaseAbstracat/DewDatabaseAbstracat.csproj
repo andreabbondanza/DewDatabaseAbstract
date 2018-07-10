@@ -11,8 +11,8 @@
     <PackageTags>Database, MySQL, Postgresql, .net, .net standard, .net core</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/andreabbondanza/DewDatabaseAbstract/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.9.0</Version>
-    <PackageReleaseNotes>Added database error const number</PackageReleaseNotes>
+    <Version>1.9.1</Version>
+    <PackageReleaseNotes>Query Composer</PackageReleaseNotes>
     <AssemblyVersion>1.9.0.0</AssemblyVersion>
     <FileVersion>1.9.0.0</FileVersion>
   </PropertyGroup>
