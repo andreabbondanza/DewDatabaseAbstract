@@ -846,6 +846,24 @@ namespace DewCore.Abstract.Database
         /// <param name="value"></param>
         /// <returns></returns>
         IOrComposer Or(string column, string op, string value);
+        /// <summary>
+        /// Order by composition
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IOrderByComposer OrderBy(params string[] columns);
+        /// <summary>
+        /// Order by composition desc
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IOrderByComposer OrderByDesc(params string[] columns);
+        /// <summary>
+        /// Group by composition
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IGroupByComposer GroupBy(params string[] columns);
     }
 
     /// <summary>
@@ -929,6 +947,24 @@ namespace DewCore.Abstract.Database
         /// <param name="value"></param>
         /// <returns></returns>
         IAndComposer And(string column, string op, string value);
+        /// <summary>
+        /// Order by composition
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IOrderByComposer OrderBy(params string[] columns);
+        /// <summary>
+        /// Order by composition desc
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IOrderByComposer OrderByDesc(params string[] columns);
+        /// <summary>
+        /// Group by composition
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IGroupByComposer GroupBy(params string[] columns);
     }
     /// <summary>
     /// In composer

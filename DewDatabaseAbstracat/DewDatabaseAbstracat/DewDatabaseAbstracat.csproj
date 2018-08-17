@@ -11,8 +11,8 @@
     <PackageTags>Database, MySQL, Postgresql, .net, .net standard, .net core</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/andreabbondanza/DewDatabaseAbstract/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.9.4</Version>
-    <PackageReleaseNotes>Fixed missing And and Or in the relatives composer</PackageReleaseNotes>
+    <Version>1.9.5</Version>
+    <PackageReleaseNotes>Added xxxby to and and or</PackageReleaseNotes>
     <AssemblyVersion>1.9.0.0</AssemblyVersion>
     <FileVersion>1.9.0.0</FileVersion>
   </PropertyGroup>
