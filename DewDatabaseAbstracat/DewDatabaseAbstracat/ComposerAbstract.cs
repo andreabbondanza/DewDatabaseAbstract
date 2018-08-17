@@ -833,6 +833,19 @@ namespace DewCore.Abstract.Database
         /// <param name="pattern"></param>
         /// <returns></returns>
         ILikeComposer Like(string column, string pattern);
+        /// <summary>
+        /// Single Or composer
+        /// </summary>
+        /// <returns></returns>
+        IOrComposer Or();
+        /// <summary>
+        /// Or composer
+        /// </summary>
+        /// <param name="column"></param>
+        /// <param name="op"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        IOrComposer Or(string column, string op, string value);
     }
 
     /// <summary>
@@ -903,6 +916,19 @@ namespace DewCore.Abstract.Database
         /// <param name="pattern"></param>
         /// <returns></returns>
         ILikeComposer Like(string column, string pattern);
+        /// <summary>
+        /// Single And composer
+        /// </summary>
+        /// <returns></returns>
+        IAndComposer And();
+        /// <summary>
+        /// And composer
+        /// </summary>
+        /// <param name="column"></param>
+        /// <param name="op"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        IAndComposer And(string column, string op, string value);
     }
     /// <summary>
     /// In composer
