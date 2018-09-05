@@ -11,10 +11,11 @@ namespace DewCore.Abstract.Database
     /// </summary>
     public sealed class DatabaseError
     {
+        private Exception _exception = null;
         /// <summary>
         /// Exception
         /// </summary>
-        public Exception Exception { get; }
+        public Exception Exception { get => _exception; }
         /// <summary>
         /// Default value for error
         /// </summary>
@@ -45,6 +46,7 @@ namespace DewCore.Abstract.Database
         {
             Description = e.Message;
             Number = e.HResult;
+            _exception = e;
         }
     }
     /// <summary>

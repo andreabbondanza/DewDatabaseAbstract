@@ -837,6 +837,37 @@ namespace DewCore.Abstract.Database
         /// <param name="pattern"></param>
         /// <returns></returns>
         ILikeComposer Like(string column, string pattern);
+        /// <summary>
+        /// Single Or composer
+        /// </summary>
+        /// <returns></returns>
+        IOrComposer Or();
+        /// <summary>
+        /// Or composer
+        /// </summary>
+        /// <param name="column"></param>
+        /// <param name="op"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        IOrComposer Or(string column, string op, string value);
+        /// <summary>
+        /// Order by composition
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IOrderByComposer OrderBy(params string[] columns);
+        /// <summary>
+        /// Order by composition desc
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IOrderByComposer OrderByDesc(params string[] columns);
+        /// <summary>
+        /// Group by composition
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IGroupByComposer GroupBy(params string[] columns);
     }
 
     /// <summary>
@@ -907,6 +938,37 @@ namespace DewCore.Abstract.Database
         /// <param name="pattern"></param>
         /// <returns></returns>
         ILikeComposer Like(string column, string pattern);
+        /// <summary>
+        /// Single And composer
+        /// </summary>
+        /// <returns></returns>
+        IAndComposer And();
+        /// <summary>
+        /// And composer
+        /// </summary>
+        /// <param name="column"></param>
+        /// <param name="op"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        IAndComposer And(string column, string op, string value);
+        /// <summary>
+        /// Order by composition
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IOrderByComposer OrderBy(params string[] columns);
+        /// <summary>
+        /// Order by composition desc
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IOrderByComposer OrderByDesc(params string[] columns);
+        /// <summary>
+        /// Group by composition
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        IGroupByComposer GroupBy(params string[] columns);
     }
     /// <summary>
     /// In composer
