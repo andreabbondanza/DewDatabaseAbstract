@@ -352,8 +352,9 @@ namespace DewCore.Abstract.Database
         /// From composition
         /// </summary>
         /// <param name="table"></param>
+        /// <param name="alias"></param>
         /// <returns></returns>
-        IFromComposer From(string table);
+        IFromComposer From(string table, string alias = null);
     }
     /// <summary>
     /// Delete composer
@@ -458,20 +459,23 @@ namespace DewCore.Abstract.Database
         /// Join composition
         /// </summary>
         /// <param name="table"></param>
+        /// <param name="alias"></param>
         /// <returns></returns>
-        IJoinComposer Join(string table);
+        IJoinComposer Join(string table, string alias = null);
         /// <summary>
         /// Left Join composotion
         /// </summary>
         /// <param name="table"></param>
+        /// <param name="alias"></param>
         /// <returns></returns>
-        IJoinComposer LJoin(string table);
+        IJoinComposer LJoin(string table, string alias = null);
         /// <summary>
         /// Right join composition
         /// </summary>
         /// <param name="table"></param>
+        /// <param name="alias"></param>
         /// <returns></returns>
-        IJoinComposer RJoin(string table);
+        IJoinComposer RJoin(string table, string alias = null);
         /// <summary>
         /// Where composition
         /// </summary>
