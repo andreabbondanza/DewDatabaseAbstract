@@ -244,19 +244,24 @@ namespace DewCore.Abstract.Database
         /// <returns></returns>
         IQueryComposer Compose(IQueryComposer compose);
         /// <summary>
+        /// Simple set query
+        /// </summary>
+        /// <param name="query"></param>
+        void SetQuery(string query = null);
+        /// <summary>
         /// Append a column
         /// </summary>
         /// <typeparam name="T">Target query composition object</typeparam>
         /// <param name="column">Column name</param>
         /// <returns></returns>
-        T Column<T>(string column) where T : class, IQueryComposer;
+        T Column<T>(string column) where T : class, IQueryComposer, new();
         /// <summary>
         /// Set a query when the constructor can't be called
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        T SetQuery<T>(string query) where T : class, IQueryComposer;
+        T SetQuery<T>(string query = null) where T : class, IQueryComposer, new();
 
     }
 

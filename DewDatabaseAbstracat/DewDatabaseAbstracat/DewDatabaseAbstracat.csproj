@@ -11,7 +11,7 @@
     <PackageTags>Database, MySQL, Postgresql, .net, .net standard, .net core</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/andreabbondanza/DewDatabaseAbstract/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.12.0</Version>
+    <Version>1.13.0</Version>
     <PackageReleaseNotes>Multiple value composer</PackageReleaseNotes>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <FileVersion>1.1.0.0</FileVersion>
