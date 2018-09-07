@@ -404,7 +404,11 @@ namespace DewCore.Abstract.Database
     /// </summary>
     public interface IValuesComposer : IQueryComposer
     {
-
+        /// <summary>
+        /// Append a new values composer
+        /// </summary>
+        /// <returns></returns>
+        IValuesComposer Values(params string[] values);
     }
     /// <summary>
     /// On composer
